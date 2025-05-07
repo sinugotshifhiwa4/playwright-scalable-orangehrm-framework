@@ -18,7 +18,7 @@ export class BrowserSessionManager {
     try {
       const storagePath = AuthStateManager.resolveAuthStateFilePath();
       await this.page.context().storageState({ path: storagePath });
-      logger.info(`Successfully saved browser session state to: ${storagePath}`);
+      logger.debug(`Successfully saved browser session state to: ${storagePath}`);
     } catch (error) {
       ErrorHandler.captureError(error, 'saveSessionState', 'Failed to save browser session state');
       throw error;

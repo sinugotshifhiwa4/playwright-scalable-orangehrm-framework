@@ -1,5 +1,4 @@
 import { test } from '../../fixtures/orangehrm.fixtures';
-//import AuthStorageStateUtils from '../../src/utils/auth/authStorageStateUtils';
 import logger from '../../src/utils/logging/loggerManager';
 
 test.describe('Side Menu Bar Test Suite @regression', () => {
