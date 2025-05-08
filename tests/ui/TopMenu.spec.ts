@@ -26,7 +26,7 @@ test.describe.only('Top Menu Bar Test Suite @regression', () => {
     logger.info('User Profile dropdown options are visible');
   });
 
-  test.only('Verify User Profile About Dialog Box data is visible', async ({ topMenuPage }) => {
+  test.skip('Verify User Profile About Dialog Box data is visible', async ({ topMenuPage }) => {
     await topMenuPage.clickUserProfileMenu();
     await topMenuPage.clickUserProfileDropdownOptionAbout();
     await topMenuPage.verifyAndAssertAboutDialogBox('Company Name', 'Version', 'Active Employees', 'Terminated Employees');

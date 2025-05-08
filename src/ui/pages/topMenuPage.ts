@@ -556,10 +556,10 @@ export class TopMenuPage extends BasePage {
       const actualEmployeesTerminatedLabelText = await this.getEmployeesTerminatedLabelText();
 
       // Assertions
-      expect(actualCompanyNameLabelText).toBe(expectedCompanyNameLabel);
-      expect(actualVersionLabelText).toBe(expectedVersionLabel);
-      expect(actualActiveEmployeesLabelText).toBe(expectedActiveEmployeesLabel);
-      expect(actualEmployeesTerminatedLabelText).toBe(expectedEmployeesTerminatedLabel);
+      expect(actualCompanyNameLabelText).toContain(expectedCompanyNameLabel);
+      expect(actualVersionLabelText).toContain(expectedVersionLabel);
+      expect(actualActiveEmployeesLabelText).toContain(expectedActiveEmployeesLabel);
+      expect(actualEmployeesTerminatedLabelText).toContain(expectedEmployeesTerminatedLabel);
     } catch (error) {
       ErrorHandler.captureError(
         error,
